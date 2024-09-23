@@ -3,11 +3,12 @@
 function getInputFromInputFild(id){
     const input = document.getElementById(id).value;
     const inputInt = parseFloat(input)
-    if(isNaN(inputInt) || inputInt < 0 ){
+    if(isNaN(inputInt) || inputInt <= 1 ){
         alert("invalid")
+        return ;
     }
     else{
-        
+        onclick=my_modal_1.showModal()
         return inputInt
     }
 }

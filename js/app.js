@@ -6,11 +6,14 @@ document.getElementById("donateNow").addEventListener("click", function(){
     
     const myBlance = getInputFromPara("my-blance")
     const inputDonation =  getInputFromInputFild("input-for-donate")
-   
+    console.log('input', inputDonation)
    
    if(myBlance < inputDonation){
         alert("insufficient balance")
-   }else{
+        
+   }
+   else{
+     
    const bdt = getInputFromPara("bdt")
    const donate = inputDonation + bdt
     console.log("donate", donate)
@@ -43,6 +46,7 @@ document.getElementById("donateNow").addEventListener("click", function(){
    console.log(afterBlance)
    document.getElementById("input-for-donate").value = ' '
    }
+   
 
 })
 
