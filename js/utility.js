@@ -41,3 +41,6 @@ function getInputFromPara(id){
 //     const modalContainer = document.getElementById("modal");
 //     modalContainer.appendChild(modal)
 // }
+
+
+// function
