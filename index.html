@@ -38,13 +38,15 @@
         font-weight: weight;
         font-style: normal;
       }
+
+
     </style>
   </head>
   <body>
     <!-- nav bar start  -->
-    <header class="pt-6 bg-backgroundNav">
+    <header class="sticky top-0 z-40 bg-white">
       
-        <div class="lg:flex justify-center bg-backgroundNav py-8 items-center border border-red-800   lg:justify-around  mx-auto bg-base-100 max-sm:gap-5">
+        <div class="lg:flex justify-center  bg-backgroundNav py-8 items-center  lg:justify-around  mx-auto bg-base-100 max-sm:gap-5">
           <div class="flex justify-center">
             <button class="px-8 bg-buttonColor text-xl font-semibold rounded-lg py-3">Blog</button>
           </div>
@@ -54,18 +56,43 @@
           </div>
           <div class="flex items-center gap-3 justify-center">
             <img src="assets/coin.png" alt="">
-            <p class="text-gray text-xl font-semibold">5300 BDT</p>
+            <p class="text-gray text-xl font-semibold"><span id="my-blance">7500</span> BDT</p>
           </div>
+        </div>
+        <div class="flex justify-center mt-16 gap-4">
+          <div class="flex justify-center mt-16 gap-4"></div>
+          <button id="donation" class="btn btn-lg bg-buttonColor">Donation</button>
+          <button class="btn btn-lg">History</button>
+        </div>
         </div>
     </header>
     <!-- navbar End -->
+<!-- mordals  -->
 
-    <main class="w-4/5 mx-auto">
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<!-- <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        if there is a button in form, it will close the modal
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog> -->
+
+<div class="modal">
+
+</div>
+
+<!-- these are cards  -->
+
+    <main class="w-4/5 mx-auto mb-8 ">
       <section >
-        <div class="flex justify-center mt-16 gap-4">
-          <button class="btn btn-lg bg-buttonColor">Donation</button>
-          <button class="btn btn-lg">History</button>
-        </div>
+        
 
 
         <div class="mt-16">
@@ -79,13 +106,13 @@
             <div class="card-body  lg:w-1/2">
               <div class="flex items-center gap-3 px-4 py-3 text-[#111111B3]  font-medium">
                 <img src="assets/coin.png" alt="">
-                <p><span>0</span> BDT</p>
+                <p><span id="bdt">0</span> BDT</p>
               </div>
               <h2 class="card-title ">Donate for Flood at Noakhali, Bangladesh</h2>
               <p > The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
               <div>
-                <input type="text" placeholder="Write Donation Amount" class="input h-14 input-bordered w-full " />
-                <button class="w-full text-xl font-semibold bg-buttonColor rounded-lg py-3 mt-3">Donate Now</button>
+                <input id="input-for-donate" type="text" placeholder="Write Donation Amount" class="input h-14 input-bordered w-full " />
+                <button onclick="showModal()" id="donateNow"  class="w-full text-xl font-semibold bg-buttonColor rounded-lg py-3 mt-3">Donate Now</button>
               </div>
             </div>
           </div>
@@ -143,6 +170,14 @@
       </div>
 
       </section>
+<!-- this is History section  -->
+      <footer>
+        <div id="history-sec">
+
+        </div>
+      </footer>
     </main>
+    <script src="js/utility.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
