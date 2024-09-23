@@ -8,7 +8,7 @@ document.getElementById("donateNow").addEventListener("click", function(){
     const inputDonation =  getInputFromInputFild("input-for-donate")
     console.log('input', inputDonation)
    
-   if(myBlance < inputDonation){
+   if(myBlance < inputDonation && inputDonation > 0){
         alert("insufficient balance")
         
    }
@@ -27,7 +27,8 @@ document.getElementById("donateNow").addEventListener("click", function(){
    //    history
    
    
-   const history = document.createElement("div");
+   if(inputDonation > 0  ){
+     const history = document.createElement("div");
    history.className = ' text-black border border-border-color rounded-md p-8 mt-4 w-3/4 mx-auto';
    history.innerHTML = `
    <p class = "font-bold text-xl"> ${inputDonation} Taka is Donated for Flood at Noakhali, Bangladesh</p>
@@ -36,6 +37,8 @@ document.getElementById("donateNow").addEventListener("click", function(){
    const historyContainer = document.getElementById("history-sec");
    
    historyContainer.appendChild(history)
+   onclick=my_modal_1.showModal()
+   }
    // history end 
       
    document.getElementById("my-blance").innerText = afterBlance;
@@ -74,7 +77,8 @@ document.getElementById("donate-2").addEventListener("click", function(){
    console.log("after bal", afterBlance)
 
 
-   const history = document.createElement("div");
+   if(inputDonation > 0  ){
+     const history = document.createElement("div");
    history.className = ' text-black border border-border-color rounded-md p-8 mt-4 w-3/4 mx-auto';
    history.innerHTML = `
    <p class = "font-bold text-xl"> ${inputDonation} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
@@ -83,6 +87,10 @@ document.getElementById("donate-2").addEventListener("click", function(){
    const historyContainer = document.getElementById("history-sec");
    
    historyContainer.appendChild(history)
+   onclick=my_modal_1.showModal()
+
+   }
+   
    // history end 
       
    document.getElementById("my-blance").innerText = afterBlance;
@@ -119,17 +127,21 @@ document.getElementById("donate-3").addEventListener("click", function(){
    
    const afterBlance = bl - inputDonation;
    console.log("after bal", afterBlance)
-
-
-   const history = document.createElement("div");
+//    hsitory start 
+if(inputDonation > 0  ){
+     const history = document.createElement("div");
    history.className = ' text-black border border-border-color rounded-md p-8 mt-4 w-3/4 mx-auto';
    history.innerHTML = `
    <p class = "font-bold text-xl"> ${inputDonation}  Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
    <p class = "pt-4">Date: ${new Date()}</p>
    `;
    const historyContainer = document.getElementById("history-sec");
+   historyContainer.appendChild(history);
+   onclick=my_modal_1.showModal()
+
+}
+
    
-   historyContainer.appendChild(history)
    // history end 
       
    document.getElementById("my-blance").innerText = afterBlance;

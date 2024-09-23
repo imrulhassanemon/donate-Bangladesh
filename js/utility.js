@@ -5,10 +5,10 @@ function getInputFromInputFild(id){
     const inputInt = parseFloat(input)
     if(isNaN(inputInt) || inputInt <= 1 ){
         alert("invalid")
-        return ;
+        return 0;
     }
     else{
-        onclick=my_modal_1.showModal()
+        
         return inputInt
     }
 }
