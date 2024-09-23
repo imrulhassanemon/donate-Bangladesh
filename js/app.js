@@ -25,7 +25,7 @@ document.getElementById("donateNow").addEventListener("click", function(){
    
    
    const history = document.createElement("div");
-   history.className = ' text-black border border-border-color rounded-md p-8 mt-4';
+   history.className = ' text-black border border-border-color rounded-md p-8 mt-4 w-3/4 mx-auto';
    history.innerHTML = `
    <p class = "font-bold text-xl"> ${inputDonation} Taka is Donated for Flood at Noakhali, Bangladesh</p>
    <p class = "pt-4">Date: ${new Date()}</p>
@@ -71,7 +71,7 @@ document.getElementById("donate-2").addEventListener("click", function(){
 
 
    const history = document.createElement("div");
-   history.className = ' text-black border border-border-color rounded-md p-8 mt-4';
+   history.className = ' text-black border border-border-color rounded-md p-8 mt-4 w-3/4 mx-auto';
    history.innerHTML = `
    <p class = "font-bold text-xl"> ${inputDonation} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
    <p class = "pt-4">Date: ${new Date()}</p>
@@ -118,7 +118,7 @@ document.getElementById("donate-3").addEventListener("click", function(){
 
 
    const history = document.createElement("div");
-   history.className = ' text-black border border-border-color rounded-md p-8 mt-4';
+   history.className = ' text-black border border-border-color rounded-md p-8 mt-4 w-3/4 mx-auto';
    history.innerHTML = `
    <p class = "font-bold text-xl"> ${inputDonation}  Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
    <p class = "pt-4">Date: ${new Date()}</p>
@@ -142,20 +142,6 @@ document.getElementById("donate-3").addEventListener("click", function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // history part 
 
 // function getElementinput(id){
@@ -166,29 +152,25 @@ document.getElementById("donate-3").addEventListener("click", function(){
 
 
 
-// const inputDonation =  getElementinput("input-for-donate");
-// const myBlance = getElementinput("my-blance");
 
-// document.getElementById("history").addEventListener("click", function(){
-
-//      const bdt = getInputFromPara("bdt")
-//    const donate = inputDonation + bdt
-//     console.log("donate", donate)
-//    const bl = myBlance;
-
-   
-//    const afterBlance = bl - inputDonation;
+document.getElementById("history").addEventListener("click", function(){
+     
+     document.getElementById("mainContainer").classList.add("hidden");
+     document.getElementById("historyContainer").classList.remove("hidden");
 
 
-//      const history = document.createElement("div");
-//      history.className = 'bg-blue text-black border rounded-md';
-//      history.innerHTML = `
-//      <p> ${afterBlance} taka is donated </p>
-//      `;
-//      const historyContainer = document.getElementById("history-sec");
+     document.getElementById("history").classList.add("bg-buttonColor");
+     document.getElementById("donation").classList.remove("bg-buttonColor");
+  
+})
 
-//      history.appendChild(historyContainer)
 
-//      const hidedonation = document.getElementById("mainContainer");
-//      hidedonation.classList.add("hidden")
-// })
+document.getElementById("donation").addEventListener("click", function(){
+     document.getElementById("mainContainer").classList.remove("hidden");
+     document.getElementById("historyContainer").classList.add("hidden");
+
+
+     document.getElementById("history").classList.remove("bg-buttonColor");
+     document.getElementById("donation").classList.add("bg-buttonColor");
+     
+})

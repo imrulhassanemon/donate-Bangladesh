@@ -61,8 +61,8 @@
         </div>
         <div class="flex justify-center mt-16 gap-4">
           <div class="flex justify-center mt-16 gap-4"></div>
-          <button id="donation" class="btn btn-lg bg-buttonColor">Donation</button>
-          <button id="history" class="btn btn-lg">History</button>
+          <button id="donation" class="rounded-md font-semibold border border-gray btn-lg bg-buttonColor">Donation</button>
+          <button id="history" class="rounded-md font-semibold border border-gray btn-lg">History</button>
         </div>
         </div>
     </header>
@@ -170,14 +170,29 @@
       </div>
 
       </section>
+    </main>
 <!-- this is History section  -->
-      <footer>
+      <footer id="historyContainer" class="hidden">
         <div id="history-sec">
 
         </div>
       </footer>
-    </main>
     <script src="js/utility.js"></script>
     <script src="js/app.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              buttonColor: "#B4F461",
+              backgroundNav: '#ede2d5',
+              gray : "#737373", 
+              'border-color': "#c4c2c2",
+            },
+          },
+        },
+      };
+    </script>
   </body>
 </html>
