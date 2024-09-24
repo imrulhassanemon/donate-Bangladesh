@@ -4,7 +4,7 @@ function getInputFromInputFild(id){
     const input = document.getElementById(id).value;
     const inputInt = parseFloat(input)
     if(isNaN(inputInt) || inputInt <= 1 ){
-        alert("invalid")
+        alert("Invalid Amount")
         return 0;
     }
     else{
